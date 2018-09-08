@@ -13,7 +13,7 @@ class RestTest extends TestCase
     {
         $this->http = new GuzzleHttp\Client(['base_uri' => 'http://localhost/backendcts2/api/usuario']);
         $response = $this->http->post('http://localhost/backendcts2/api/login', ['json' => [
-          'correo' => 'yickson@correo.com',
+          'correo' => 'admin@admin.com',
           'clave' => 'admin'
           ]
         ]);
@@ -24,7 +24,7 @@ class RestTest extends TestCase
     public function testPostLogin()
     {
       $response = $this->http->post('http://localhost/backendcts2/api/login', ['json' => [
-        'correo' => 'yickson@correo.com',
+        'correo' => 'admin@admin.com',
         'clave' => 'admin'
         ]
       ]);
@@ -80,13 +80,13 @@ class RestTest extends TestCase
                     'Authorization' => 'Bearer ' . $this->token,
                     'Accept'        => 'application/json',
                  ];
-      $response = $this->http->put('http://localhost/backendcts2/api/usuario/19',
+      $response = $this->http->put('http://localhost/backendcts2/api/usuario/2',
       [
           'headers'         => $headers,
           'json'            => [
-              'id' => 19,
-              'nombre' => 'Conocido',
-              'correo' => 'evolucion@correo.com',
+              'id' => 2,
+              'nombre' => 'Angelica Herrera',
+              'correo' => 'angelica@correo.com',
               'rol' => 3
             ]
       ]);
@@ -102,7 +102,7 @@ class RestTest extends TestCase
                     'Authorization' => 'Bearer ' . $this->token,
                     'Accept'        => 'application/json',
                  ];
-      $response = $this->http->delete('http://localhost/backendcts2/api/usuario/18', ['headers' => $headers]);
+      $response = $this->http->delete('http://localhost/backendcts2/api/usuario/3', ['headers' => $headers]);
       $this->assertEquals(200, $response->getStatusCode());
 
       $data = json_decode($response->getBody(), true);

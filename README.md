@@ -54,3 +54,13 @@ Información a enviar en formato JSON:
 ```
 Eliminar un usuario - Método **DELETE**:
 http://localhost/backendcts2/api/usuario/$id
+
+Testing del servicio:
+
+Si estás en Windows y usando Xampp ir a la siguiente dirección desde la consola de comando, se utiliza PHPUnit con GuzzleHttp para facilitar el envío de la información al servicio REST tanto en las cabeceras (Header) como ver las respuestas (Response).
+
+`
+cd C:\xampp\htdocs\backendcts2\default\app\tests
+ejecutar comando ..\..\..\vendor\bin\phpunit.bat RestTest.php
+$# Retorna OK (5 tests, 11 assertions)
+`
