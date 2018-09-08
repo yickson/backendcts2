@@ -59,8 +59,10 @@ Testing del servicio:
 
 Si estás en Windows y usando Xampp ir a la siguiente dirección desde la consola de comando, se utiliza PHPUnit con GuzzleHttp para facilitar el envío de la información al servicio REST tanto en las cabeceras (Header) como ver las respuestas (Response).
 
-`
-cd C:\xampp\htdocs\backendcts2\default\app\tests
-ejecutar comando ..\..\..\vendor\bin\phpunit.bat RestTest.php
-$# Retorna OK (5 tests, 14 assertions)
-`
+`cd C:\xampp\htdocs\backendcts2\default\app\tests`
+`ejecutar comando ..\..\..\vendor\bin\phpunit.bat RestTest.php`
+`$# Retorna OK (5 tests, 14 assertions)`
+
+Base de datos:
+
+La base de datos se encuentra en la carpeta BBDD, la configuración ya está seteada para manejar dicha base de datos, en tal caso de un error ingresar en la carpeta default/app/config/databases.ini para setear los valores.
