@@ -4,7 +4,7 @@ English: https://github.com/KumbiaPHP/Documentation/tree/master/en
 
 ## API Rest para la gestión de usuarios mediante un login con JWT
 
-REST-API
+### REST-API
 
 Login del usuario - Método **POST**:
 http://localhost/backendcts2/api/login
@@ -60,7 +60,9 @@ Testing del servicio:
 Si estás en Windows y usando Xampp ir a la siguiente dirección desde la consola de comando, se utiliza PHPUnit con GuzzleHttp para facilitar el envío de la información al servicio REST tanto en las cabeceras (Header) como ver las respuestas (Response).
 
 `cd C:\xampp\htdocs\backendcts2\default\app\tests`
+
 `ejecutar comando ..\..\..\vendor\bin\phpunit.bat RestTest.php`
+
 `$# Retorna OK (5 tests, 14 assertions)`
 
 Base de datos:
