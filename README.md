@@ -20,7 +20,7 @@ Esto devuelve un token que deberás enviar en las cabeceras para que el servicio
 pueda saber que esta logueado y puedas tener acceso a las llamadas.
 
 Realizar pruebas en PostMan, recuerda tener generado el token para poder enviarlo en
-las cabeceras "Authorization": Bearer TuToken.
+las cabeceras **"Authorization": Bearer $tuToken.**
 
 Obtener todos los usuarios - Método **GET**:
 http://localhost/backendcts2/api/usuario
