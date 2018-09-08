@@ -62,5 +62,5 @@ Si estás en Windows y usando Xampp ir a la siguiente dirección desde la consol
 `
 cd C:\xampp\htdocs\backendcts2\default\app\tests
 ejecutar comando ..\..\..\vendor\bin\phpunit.bat RestTest.php
-$# Retorna OK (5 tests, 11 assertions)
+$# Retorna OK (5 tests, 14 assertions)
 `

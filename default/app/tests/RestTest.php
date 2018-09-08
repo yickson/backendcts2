@@ -62,13 +62,16 @@ class RestTest extends TestCase
       $response = $this->http->post('', [
           'headers'         => $headers,
           'json'            => [
-            'nombre' => 'Anonimo',
-            'correo' => 'foo@bar.com',
-            'clave' => 'secreto',
+            'nombre' => 'Guillermo Castro',
+            'correo' => 'guillermo@correo.com',
+            'clave' => '123456',
             'rol' => 2
             ]
       ]);
       $this->assertEquals(200, $response->getStatusCode());
+
+      $contentType = $response->getHeaders()["Content-Type"][0];
+      $this->assertEquals("application/json", $contentType);
 
       $data = json_decode($response->getBody(), true);
       $this->assertArrayHasKey('mensaje', $data);
@@ -92,6 +95,9 @@ class RestTest extends TestCase
       ]);
       $this->assertEquals(200, $response->getStatusCode());
 
+      $contentType = $response->getHeaders()["Content-Type"][0];
+      $this->assertEquals("application/json", $contentType);
+
       $data = json_decode($response->getBody(), true);
       $this->assertArrayHasKey('mensaje', $data);
     }
@@ -104,6 +110,9 @@ class RestTest extends TestCase
                  ];
       $response = $this->http->delete('http://localhost/backendcts2/api/usuario/3', ['headers' => $headers]);
       $this->assertEquals(200, $response->getStatusCode());
+
+      $contentType = $response->getHeaders()["Content-Type"][0];
+      $this->assertEquals("application/json", $contentType);
 
       $data = json_decode($response->getBody(), true);
       $this->assertArrayHasKey('mensaje', $data);
